@@ -1,0 +1,14 @@
+{
+  "name": "ckube-api",
+  "version": "0.1.0",
+  "scripts": {
+    "generate": "docker run -v $(pwd):/thrift -it monstrs/thrift-nodejs --gen js:node -out /thrift/lib /thrift/CKube.thrift"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "thrift": "git+https://github.com/monstrs/nodejs-thrift.git"
+  },
+  "private": true
+}
